@@ -1,0 +1,13 @@
+/* Añade esto al inicio de tus estilos globales */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Mismo color que tu main-container */
+}
+
+/* Si usas un layout de aplicación */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

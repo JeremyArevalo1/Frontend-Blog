@@ -20,9 +20,8 @@
   }
   
   .container-publications-tallerView {
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    padding: 10px;
+    padding: 10px 250px;
     margin-top: 3rem;
   }
   
@@ -30,6 +29,7 @@
     background-color: #ffffff;
     border-radius: 10px;
     padding: 1.8rem;
+    margin: 50px;
     box-shadow: 0 5px 15px rgba(76, 88, 62, 0.2);
     border: 2px solid #768064;
     transition: all 0.3s ease;

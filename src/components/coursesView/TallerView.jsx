@@ -1,5 +1,6 @@
 import React from "react";
 import { usePublications } from "../../shared/hooks/usePublicationsView";
+import { CommentForm } from "../comment/CommentForm";
 
 export const ViewTaller = () => {
     const { publications, loading, error } = usePublications();
@@ -14,7 +15,7 @@ export const ViewTaller = () => {
 
     return (
         <div className="container-tallerView">
-            <h1 className="text-tallerView">Publicaciones</h1>
+            <h1 className="text-tallerView text-blue-600">Publicaciones</h1>
             
             {publications.length === 0 ? (
                 <p className="no-pubs-tallerView">Aun no se suben publicaciones</p>
@@ -36,17 +37,19 @@ export const ViewTaller = () => {
                                     Expira: {new Date(publication.expirationDate).toLocaleDateString()}
                                 </span>
                             </div>
-                            
+                            <CommentForm/>
                             {publication.comments && publication.comments.length > 0 && (
                                 <div className="comments-section-tallerView">
                                     <h3 className="comments-title-tallerView">Comentarios:</h3>
                                     <ul className="comments-list-tallerView">
+                                        
                                         {publication.comments.map((comment) => (
                                             <li key={comment._id} className="comment-item-tallerView">
                                                 <p className="comment-user-tallerView">{comment.nameUser}</p>
                                                 <p className="comment-text-tallerView">{comment.comment}</p>
                                                 <p className="comment-date-tallerView">
                                                     {new Date(comment.creationDate).toLocaleDateString()}
+                                                    
                                                 </p>
                                             </li>
                                         ))}

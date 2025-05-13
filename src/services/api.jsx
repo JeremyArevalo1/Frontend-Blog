@@ -17,3 +17,16 @@ export const getPublications = async () => {
         };
     }
 };
+
+
+export const createComment = async (commentData) => {
+    try {
+      const response = await apiClient.post("/comments/", commentData);
+      return response.data;
+    } catch (error) {
+      return {
+        success: false,
+        msg: error.response?.data?.msg || "Error al crear comentario",
+      };
+    }
+  };

@@ -1,4 +1,4 @@
-/* Añade esto al inicio de tus estilos globales */
+@import "tailwindcss";
 body {
   margin: 0;
   padding: 0;

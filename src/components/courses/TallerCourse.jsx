@@ -5,7 +5,7 @@ export const CardTaller = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/taller");
+    navigate("/tallerPage");
   };
 
   return (

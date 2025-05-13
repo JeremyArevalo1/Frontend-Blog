@@ -3,7 +3,7 @@ import { Toaster } from "react-hot-toast";
 import routes from "./routes.jsx"
 
 
-export const App = () => {
+const App = () => {
 
   let element = useRoutes(routes);
 
@@ -17,3 +17,4 @@ export const App = () => {
     </>
   )
 }
+export default App;

@@ -2,8 +2,8 @@ import React from "react";
 import { usePublications } from "../../shared/hooks/usePublicationsView";
 import { CommentForm } from "../comment/CommentForm";
 
-export const ViewTaller = () => {
-    const { publications, loading, error } = usePublications();
+export const ViewTaller = ({ courseName }) => {
+    const { publications, loading, error } = usePublications({ courseName });
 
     if (loading) {
         return <div className="loading-tallerView">Cargando publicaciones...</div>;
@@ -15,7 +15,7 @@ export const ViewTaller = () => {
 
     return (
         <div className="container-tallerView">
-            <h1 className="text-tallerView text-blue-600">Publicaciones</h1>
+            <h1 className="text-tallerView text-blue-600">Taller</h1>
             
             {publications.length === 0 ? (
                 <p className="no-pubs-tallerView">Aun no se suben publicaciones</p>
@@ -28,16 +28,12 @@ export const ViewTaller = () => {
                         >
                             <h2 className="pub-title-tallerView">{publication.title}</h2>
                             <p className="pub-desc-tallerView">{publication.descriptionoftheactivity}</p>
-                            
+                            <CommentForm publicationId={publication._id}/>
                             <div className="pub-dates-tallerView">
                                 <span>
                                     Creado: {new Date(publication.creationDate).toLocaleDateString()}
                                 </span>
-                                <span>
-                                    Expira: {new Date(publication.expirationDate).toLocaleDateString()}
-                                </span>
                             </div>
-                            <CommentForm/>
                             {publication.comments && publication.comments.length > 0 && (
                                 <div className="comments-section-tallerView">
                                     <h3 className="comments-title-tallerView">Comentarios:</h3>

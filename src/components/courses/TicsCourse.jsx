@@ -9,18 +9,28 @@ export const CardTics = () => {
   };
 
   return (
-    <div className="card card-tics" onClick={handleClick}>
-      <div className="card-image-tics">
-        <div className="icon-container">
-          <i className="fas fa-network-wired"></i>
+    <div className="card card-practica" onClick={handleClick}>
+      <div className="card-image-practica">
+        <div className="image-overlay-practica"></div>
+        <div className="icon-container-practica">
+          <i className="fas fa-tools-practica"></i>
         </div>
+        <div className="category-tag-practica">Práctico</div>
       </div>
-      <div className="card-content-tics">
-        <h3 className="card-title-tics">TICs</h3>
-        <p className="card-text-tics">
-          Explora el mundo de las Tecnologías de la Información y Comunicación 
-          y su impacto en la educación y el desarrollo profesional.
+      <div className="card-content-practica">
+        <div className="card-meta-practica">
+          <span className="duration-practica">6 semanas</span>
+          <span className="level-practica">Dificil</span>
+        </div>
+        <h3 className="card-title-practica">Practica Supervisada</h3>
+        <p className="card-text-practica">
+          Aprende haciendo con nuestros talleres prácticos diseñados para 
+          fortalecer tus habilidades técnicas y creativas.
         </p>
+        <div className="card-footer-practica">
+          <span className="author-practica">Por: Equipo Educativo</span>
+          <button className="action-button-practica">Ver detalles →</button>
+        </div>
       </div>
     </div>
   );

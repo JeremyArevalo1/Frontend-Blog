@@ -1,26 +1,35 @@
+// hooks/usePublications.js
 import { useState, useEffect } from "react";
-import { getPublications } from "../../services";
+import { getPublications, getPublicationsByCourse, getPublicationsByCourseName } from "../../services";
 
-export const usePublications = (initialFilters = {}) => {
+export const usePublications = ({ courseId = null, courseName = null } = {}) => {
     const [publications, setPublications] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [filters, setFilters] = useState(initialFilters);
 
-    const fetchPublications = async (currentFilters = filters) => {
+    const fetchPublications = async () => {
         setLoading(true);
         setError(null);
-        
+
         try {
-            const response = await getPublications(currentFilters);
-            
+            let response;
+
+            if (courseName) {
+                response = await getPublicationsByCourseName(courseName);
+            } else if (courseId) {
+                response = await getPublicationsByCourse(courseId);
+            } else {
+                response = await getPublications();
+            }
+
             if (response.success) {
                 setPublications(response.publications);
             } else {
-                setError(response.msg || "Error al obtener publicaciones");
+                setError(response.message || "Error al obtener publicaciones");
             }
         } catch (err) {
             setError("Error de conexión al servidor");
+            console.error(err);
         } finally {
             setLoading(false);
         }
@@ -28,13 +37,12 @@ export const usePublications = (initialFilters = {}) => {
 
     useEffect(() => {
         fetchPublications();
-    }, [filters]);
+    }, [courseId, courseName]);
 
     return {
         publications,
         loading,
         error,
-        setFilters,
-        fetchPublications
+        refetch: fetchPublications
     };
 };

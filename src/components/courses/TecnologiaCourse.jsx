@@ -11,16 +11,26 @@ export const CardTecnologia = () => {
   return (
     <div className="card card-tecnologia" onClick={handleClick}>
       <div className="card-image-tecnologia">
-        <div className="icon-container">
-          <i className="fas fa-microchip"></i>
+        <div className="image-overlay-tecnologia"></div>
+        <div className="icon-container-tecnologia">
+          <i className="fas fa-tools-tecnologia"></i>
         </div>
+        <div className="category-tag-tecnologia">Práctico</div>
       </div>
       <div className="card-content-tecnologia">
-        <h3 className="card-title-tecnologia">Tecnología</h3>
+        <div className="card-meta-tecnologia">
+          <span className="duration-tecnologia">8 semanas</span>
+          <span className="level-tecnologia">Facil</span>
+        </div>
+        <h3 className="card-title-tecnologia">Tecnologia</h3>
         <p className="card-text-tecnologia">
-          Descubre los últimos avances tecnológicos y cómo están transformando 
-          nuestra forma de aprender y enseñar en el mundo moderno.
+          Aprende haciendo con nuestros talleres prácticos diseñados para 
+          fortalecer tus habilidades técnicas y creativas.
         </p>
+        <div className="card-footer-tecnologia">
+          <span className="author-tecnologia">Por: Equipo Educativo</span>
+          <button className="action-button-tecnologia">Ver detalles →</button>
+        </div>
       </div>
     </div>
   );

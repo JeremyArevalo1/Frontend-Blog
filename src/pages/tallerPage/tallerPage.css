@@ -182,3 +182,104 @@
     margin-right: auto;
     border: 2px solid #4c583e;
   }
+
+  /* Estilos para el formulario de comentarios */
+.comment-form-tallerView {
+    background-color: #f8f9f7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(44, 52, 36, 0.1);
+    border: 1px solid #daded8;
+    position: relative;
+    overflow: hidden;
+}
+
+.comment-form-tallerView::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #768064;
+}
+
+.comment-form-tallerView input[type="text"],
+.comment-form-tallerView textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #959581;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #2c3424;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.comment-form-tallerView input[type="text"]:focus,
+.comment-form-tallerView textarea:focus {
+    outline: none;
+    border-color: #768064;
+    box-shadow: 0 0 0 2px rgba(118, 128, 100, 0.2);
+}
+
+.comment-form-tallerView input[type="text"]::placeholder,
+.comment-form-tallerView textarea::placeholder {
+    color: #959581;
+    opacity: 0.7;
+}
+
+.comment-form-tallerView textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.comment-form-tallerView button {
+    background-color: #768064;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.comment-form-tallerView button:hover {
+    background-color: #4c583e;
+    transform: translateY(-1px);
+}
+
+.comment-form-tallerView button:disabled {
+    background-color: #959581;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.error-msg-tallerView {
+    color: #daded8;
+    background-color: #768064;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.success-msg-tallerView {
+    color: #2c3424;
+    background-color: #daded8;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    border: 1px solid #768064;
+}

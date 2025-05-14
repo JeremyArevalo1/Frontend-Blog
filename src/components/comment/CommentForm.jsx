@@ -14,10 +14,11 @@ export const CommentForm = ({ publicationId, onCommentAdded }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     handleSubmit(publicationId);
+    window.location.reload();
   };
 
   return (
-    <form className="comment-form" onSubmit={onSubmit}>
+    <form className="comment-form-tallerView" onSubmit={onSubmit}>
       <input
         type="text"
         name="nameUser"
@@ -29,17 +30,17 @@ export const CommentForm = ({ publicationId, onCommentAdded }) => {
       />
       <textarea
         name="comment"
-        placeholder="Escribe tu comentario"
+        placeholder="Escribe tu comentario aquí..."
         value={formData.comment}
         onChange={handleChange}
         maxLength={150}
         required
       />
       <button type="submit" disabled={loading}>
-        {loading ? "Enviando..." : "Agregar Comentario"}
+        {loading ? "Enviando..." : "Publicar Comentario"}
       </button>
-      {error && <p className="error-msg">{error}</p>}
-      {successMsg && <p className="success-msg">{successMsg}</p>}
+      {error && <p className="error-msg-tallerView">{error}</p>}
+      {successMsg && <p className="success-msg-tallerView">{successMsg}</p>}
     </form>
   );
 };

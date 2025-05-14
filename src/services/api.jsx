@@ -30,3 +30,44 @@ export const createComment = async (commentData) => {
       };
     }
   };
+
+  export const getCourseById = async (id) => {
+    try {
+        const response = await apiClient.get(`/courses/${id}`);
+        return response.data;
+    } catch (error) {
+        return {
+            error,
+            success: false,
+            msg: "Error al obtener el curso"
+        };
+    }
+};
+
+
+  export const getPublicationsByCourse = async (courseId) => {
+    try {
+        const response = await apiClient.get(`/publications/by-course/${courseId}`);
+        return response.data.publications;
+    } catch (error) {
+        return {
+            error: true,
+            message: error.response?.data?.msg || "Error al obtener publicaciones por curso",
+        };
+    }
+};
+
+export const getPublicationsByCourseName = async (courseName) => {
+    try {
+        const response = await apiClient.get(`/publications/by-course-name/${courseName}`);
+        return {
+            success: true,
+            publications: response.data.publications
+        };
+    } catch (error) {
+        return {
+            success: false,
+            message: error.response?.data?.msg || "Error al obtener publicaciones por nombre de curso",
+        };
+    }
+};

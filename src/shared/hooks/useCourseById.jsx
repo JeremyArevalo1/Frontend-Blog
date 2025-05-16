@@ -18,6 +18,7 @@ export const useCourseById = (id) => {
                 }
             } catch (err) {
                 setError("Error al conectar con el servidor");
+                err
             } finally {
                 setLoading(false);
             }

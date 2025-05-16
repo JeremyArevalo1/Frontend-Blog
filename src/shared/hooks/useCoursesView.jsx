@@ -1,6 +1,6 @@
 // hooks/useCourses.js
 import { useState, useEffect } from "react";
-import { getCourses } from "../services";
+import { getCourses } from "../../services";
 
 export const useCourses = () => {
     const [courses, setCourses] = useState([]);

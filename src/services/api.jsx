@@ -31,6 +31,21 @@ export const createComment = async (commentData) => {
     }
   };
 
+  export const getCourses = async () => {
+    try {
+        const response = await apiClient.get("/courses/");
+        return {
+            success: true,
+            courses: response.data.courses
+        };
+    } catch (error) {
+        return {
+            success: false,
+            message: error.response?.data?.msg || "Error al obtener cursos"
+        };
+    }
+};
+
   export const getCourseById = async (id) => {
     try {
         const response = await apiClient.get(`/courses/${id}`);
@@ -44,6 +59,20 @@ export const createComment = async (commentData) => {
     }
 };
 
+export const getPublicationById = async (id) => {
+  try {
+    const response = await apiClient.get(`/publications/${id}`);
+    return {
+      success: true,
+      publication: response.data.publication
+    };
+  } catch (error) {
+    return {
+      success: false,
+      message: error.response?.data?.msg || "Error al obtener la publicación"
+    };
+  }
+};
 
   export const getPublicationsByCourse = async (courseId) => {
     try {

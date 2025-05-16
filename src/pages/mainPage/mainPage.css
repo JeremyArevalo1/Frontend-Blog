@@ -20,6 +20,7 @@
   position: relative;
   overflow: hidden;
   border: 1px solid #768064;
+  animation: fadeIn 0.7s ease-out;
 }
 
 .main-header::after {
@@ -82,11 +83,29 @@
 .card-image-taller,
 .card-image-tecnologia,
 .card-image-practica {
+  box-sizing: border-box;
+  position: relative;
   height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+}
+
+.image-wrapper-Practica,
+.image-wrapper-Tecnologia,
+.image-wrapper-taller {
+  width: 90%;
+  height: 90%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-gif-Practica,
+.card-gif-tecnolgia,
+.card-gif-taller {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image-overlay-taller,

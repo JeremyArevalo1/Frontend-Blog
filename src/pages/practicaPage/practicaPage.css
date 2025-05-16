@@ -1,13 +1,13 @@
-/* ViewTaller.css */
-.container-tallerView {
+/* ViewPractica.css */
+.container-practicaView {
     margin: 0 auto;
     padding: 50px 100px;
     min-height: 100vh;
     background-color: #daded8;
     animation: fadeIn 0.8s ease-out;
-  }
-  
-  .text-tallerView {
+}
+
+.text-practicaView {
     color: #2c3424;
     font-size: 2.8rem;
     margin-bottom: 2.5rem;
@@ -18,15 +18,15 @@
     background-color: #959581;
     border-radius: 8px;
     box-shadow: inset 0 0 10px rgba(44, 52, 36, 0.2);
-  }
-  
-  .container-publications-tallerView {
+}
+
+.container-publications-practicaView {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     padding: 10px 250px;
     margin-top: 3rem;
-  }
-  
-  .pub-card-tallerView {
+}
+
+.pub-card-practicaView {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 1.8rem;
@@ -36,9 +36,9 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-  }
-  
-  .pub-card-tallerView::before {
+}
+
+.pub-card-practicaView::before {
     content: '';
     position: absolute;
     top: 0;
@@ -48,15 +48,15 @@
     background-color: rgba(149, 149, 129, 0.1);
     transform: skewX(-15deg);
     z-index: 0;
-  }
-  
-  .pub-card-tallerView:hover {
+}
+
+.pub-card-practicaView:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(76, 88, 62, 0.3);
     border-color: #4c583e;
-  }
-  
-  .pub-title-tallerView {
+}
+
+.pub-title-practicaView {
     color: #2c3424;
     font-size: 1.6rem;
     margin-bottom: 1.2rem;
@@ -65,18 +65,18 @@
     z-index: 1;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #959581;
-  }
-  
-  .pub-desc-tallerView {
+}
+
+.pub-desc-practicaView {
     color: #4c583e;
     line-height: 1.6;
     margin-bottom: 1.8rem;
     font-size: 1rem;
     position: relative;
     z-index: 1;
-  }
-  
-  .pub-dates-tallerView {
+}
+
+.pub-dates-practicaView {
     display: flex;
     justify-content: space-between;
     background-color: #768064;
@@ -85,17 +85,17 @@
     margin-bottom: 1.5rem;
     padding: 0.8rem 1rem;
     border-radius: 5px;
-  }
-  
-  .comments-section-tallerView {
+}
+
+.comments-section-practicaView {
     margin-top: 1.8rem;
     padding-top: 1.5rem;
     border-top: 2px dashed #959581;
     position: relative;
     z-index: 1;
-  }
-  
-  .comments-title-tallerView {
+}
+
+.comments-title-practicaView {
     color: #2c3424;
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -105,50 +105,50 @@
     border-radius: 20px;
     display: inline-block;
     border: 1px solid #4c583e;
-  }
-  
-  .comments-list-tallerView {
+}
+
+.comments-list-practicaView {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .comment-item-tallerView {
+}
+
+.comment-item-practicaView {
     background-color: rgba(118, 128, 100, 0.1);
     padding: 1rem;
     border-radius: 6px;
     margin-bottom: 1rem;
     border-left: 3px solid #4c583e;
-  }
-  
-  .comment-user-tallerView {
+}
+
+.comment-user-practicaView {
     color: #2c3424;
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
-  }
-  
-  .comment-user-tallerView::before {
-    content: '•';
+}
+
+.comment-user-practicaView::before {
+     content: '•';
     color: #768064;
     margin-right: 0.5rem;
     font-size: 1.2rem;
-  }
-  
-  .comment-text-tallerView {
+}
+
+.comment-text-practicaView {
     color: #4c583e;
     margin-bottom: 0.5rem;
     line-height: 1.5;
-  }
-  
-  .comment-date-tallerView {
+}
+
+.comment-date-practicaView {
     color: #959581;
     font-size: 0.8rem;
     text-align: right;
-  }
-  
-  .no-pubs-tallerView {
+}
+
+.no-pubs-practicaView {
     text-align: center;
     color: #4c583e;
     font-size: 1.3rem;
@@ -160,17 +160,17 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .loading-tallerView {
+}
+
+.loading-practicaView {
     text-align: center;
     color: #4c583e;
     font-size: 1.3rem;
     margin-top: 3rem;
     padding: 1.5rem;
-  }
-  
-  .error-tallerView {
+}
+
+.error-practicaView {
     text-align: center;
     color: #daded8;
     font-size: 1.3rem;
@@ -182,105 +182,4 @@
     margin-left: auto;
     margin-right: auto;
     border: 2px solid #4c583e;
-  }
-
-  /* Estilos para el formulario de comentarios */
-.comment-form-tallerView {
-    background-color: #f8f9f7;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 8px rgba(44, 52, 36, 0.1);
-    border: 1px solid #daded8;
-    position: relative;
-    overflow: hidden;
-}
-
-.comment-form-tallerView::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background-color: #768064;
-}
-
-.comment-form-tallerView input[type="text"],
-.comment-form-tallerView textarea {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #959581;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    color: #2c3424;
-    background-color: #ffffff;
-    transition: all 0.3s ease;
-}
-
-.comment-form-tallerView input[type="text"]:focus,
-.comment-form-tallerView textarea:focus {
-    outline: none;
-    border-color: #768064;
-    box-shadow: 0 0 0 2px rgba(118, 128, 100, 0.2);
-}
-
-.comment-form-tallerView input[type="text"]::placeholder,
-.comment-form-tallerView textarea::placeholder {
-    color: #959581;
-    opacity: 0.7;
-}
-
-.comment-form-tallerView textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-.comment-form-tallerView button {
-    background-color: #768064;
-    color: #ffffff;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: block;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.comment-form-tallerView button:hover {
-    background-color: #4c583e;
-    transform: translateY(-1px);
-}
-
-.comment-form-tallerView button:disabled {
-    background-color: #959581;
-    cursor: not-allowed;
-    transform: none;
-}
-
-.error-msg-tallerView {
-    color: #daded8;
-    background-color: #768064;
-    padding: 0.5rem;
-    border-radius: 4px;
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    text-align: center;
-}
-
-.success-msg-tallerView {
-    color: #2c3424;
-    background-color: #daded8;
-    padding: 0.5rem;
-    border-radius: 4px;
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    text-align: center;
-    border: 1px solid #768064;
 }

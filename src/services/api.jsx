@@ -100,3 +100,33 @@ export const getPublicationsByCourseName = async (courseName) => {
         };
     }
 };
+
+export const editComment = async (commentId, commentText) => {
+  try {
+      const response = await apiClient.put(`/comments/${commentId}`, { comment: commentText });
+      return {
+          success: true,
+          comment: response.data.comment,
+      };
+  } catch (error) {
+      return {
+          success: false,
+          msg: error.response?.data?.msg || "Error al editar comentario",
+      };
+  }
+};
+
+export const deleteComment = async (commentId) => {
+  try {
+      const response = await apiClient.delete(`/comments/${commentId}`);
+      return {
+          success: true,
+          comment: response.data.comment,
+      };
+  } catch (error) {
+      return {
+          success: false,
+          msg: error.response?.data?.msg || "Error al eliminar comentario",
+      };
+  }
+};

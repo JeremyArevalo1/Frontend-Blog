@@ -91,8 +91,8 @@ export const ViewPractica = ({ courseName }) => {
                                   onChange={(e) => setEditedText(e.target.value)}
                                 />
                                 <div>
-                                  <button onClick={() => handleUpdate(comment._id)}>Guardar</button>
-                                  <button onClick={cancelEditing}>Cancelar</button>
+                                  <button className="btnGuardarPractica" onClick={() => handleUpdate(comment._id)}>Guardar</button>
+                                  <button className="btnCancelarPractica" onClick={cancelEditing}>Cancelar</button>
                                 </div>
                               </>
                             ) : (
@@ -102,8 +102,8 @@ export const ViewPractica = ({ courseName }) => {
                                   {new Date(comment.creationDate).toLocaleDateString()}
                                 </p>
                                 <div>
-                                  <button onClick={() => startEditing(comment)}>Editar</button>
-                                  <button onClick={() => handleDelete(comment._id)}>Eliminar</button>
+                                  <button className="btnEditarPractica" onClick={() => startEditing(comment)}>Editar</button>
+                                  <button className="btnEliminarPractica" onClick={() => handleDelete(comment._id)}>Eliminar</button>
                                 </div>
                               </>
                             )}

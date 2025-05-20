@@ -90,8 +90,8 @@ export const ViewTaller = ({ courseName }) => {
                                   onChange={(e) => setEditedText(e.target.value)}
                                 />
                                 <div>
-                                  <button onClick={() => handleUpdate(comment._id)}>Guardar</button>
-                                  <button onClick={cancelEditing}>Cancelar</button>
+                                  <button className="btnGuardarTaller" onClick={() => handleUpdate(comment._id)}>Guardar</button>
+                                  <button className="btnCancelarTaller" onClick={cancelEditing}>Cancelar</button>
                                 </div>
                               </>
                             ) : (
@@ -101,8 +101,8 @@ export const ViewTaller = ({ courseName }) => {
                                   {new Date(comment.creationDate).toLocaleDateString()}
                                 </p>
                                 <div>
-                                  <button onClick={() => startEditing(comment)}>Editar</button>
-                                  <button onClick={() => handleDelete(comment._id)}>Eliminar</button>
+                                  <button className="btnEditarTaller" onClick={() => startEditing(comment)}>Editar</button>
+                                  <button className="btnEliminarTaller" onClick={() => handleDelete(comment._id)}>Eliminar</button>
                                 </div>
                               </>
                             )}

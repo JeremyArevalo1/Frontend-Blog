@@ -26,7 +26,6 @@ export const CommentForm = ({ publicationId, onCommentAdded }) => {
         value={formData.nameUser}
         onChange={handleChange}
         maxLength={30}
-        required
       />
       <textarea
         name="comment"
